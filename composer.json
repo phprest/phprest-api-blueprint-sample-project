@@ -1,0 +1,27 @@
+{
+	"name": "phprest/phprest-api-blueprint-sample-project",
+	"description": "Phprest Sample Project.",
+	"keywords": ["phprest", "rest", "restful", "framework"],
+	"license": "MIT",
+	"type": "project",
+	"authors": [
+		{
+			"name": "Adam Balogh",
+			"email": "baloghbh@gmail.com"
+		}
+	],
+	"require": {
+		"phprest/phprest": "dev-master",
+		"phprest/phprest-service-request-filter": "dev-master",
+		"phprest/phprest-service-validator": "dev-master",
+		"phprest/phprest-service-orm": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"Api\\": "api",
+			"App\\": "app"
+		}
+	},
+	"minimum-stability" : "dev",
+	"prefer-stable" : true
+}
