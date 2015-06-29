@@ -9,5 +9,5 @@ use Monolog\Handler\StreamHandler;
 $logger = $app->getContainer()->get(LoggerConfig::getServiceName());
 
 $logger->pushHandler(
-	new StreamHandler(__DIR__ . '/../storage/log', \Monolog\Logger::DEBUG)
+    new StreamHandler(__DIR__ . '/../storage/log', \Monolog\Logger::DEBUG)
 );

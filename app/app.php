@@ -4,8 +4,8 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $paths = require __DIR__ . '/../paths.php';
 
 return getApplication(
-	getApplicationConfig('phprest', '0.1', true, $paths),
-	$paths
+    getApplicationConfig('phprest', '0.1', true, $paths),
+    $paths
 );
 
 /**
@@ -16,13 +16,13 @@ return getApplication(
  */
 function getApplication(\Phprest\Config $config, array $paths)
 {
-	$app = new \Phprest\Application($config);
+    $app = new \Phprest\Application($config);
 
-	require_once $paths['services'];
-	require_once $paths['config.logger'];
-	require_once $paths['routes'];
+    require_once $paths['services'];
+    require_once $paths['config.logger'];
+    require_once $paths['routes'];
 
-	return $app;
+    return $app;
 }
 
 /**
@@ -35,7 +35,7 @@ function getApplication(\Phprest\Config $config, array $paths)
  */
 function getApplicationConfig($vendor, $apiVersion, $debug, array $paths)
 {
-	$config = new \Phprest\Config($vendor, $apiVersion, $debug);
+    $config = new \Phprest\Config($vendor, $apiVersion, $debug);
 
-	return $config;
+    return $config;
 }
