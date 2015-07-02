@@ -4,7 +4,7 @@ use Api\Camera\Entity\Camera;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 
-class DefaultState implements FixtureInterface
+class StateToOff implements FixtureInterface
 {
     public function load(ObjectManager $manager)
     {
