@@ -14,7 +14,10 @@
 		"phprest/phprest": "dev-master",
 		"phprest/phprest-service-request-filter": "dev-master",
 		"phprest/phprest-service-validator": "dev-master",
-		"phprest/phprest-service-orm": "dev-master"
+		"phprest/phprest-service-orm": "dev-master",
+		"jsor/stack-jwt": "2.0.0",
+		"stack/run": "1.0.1",
+		"namshi/jose": "~6.0"
 	},
 	"autoload": {
 		"psr-4": {

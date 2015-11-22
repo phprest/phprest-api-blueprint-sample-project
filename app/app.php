@@ -22,6 +22,22 @@ function getApplication(\Phprest\Config $config, array $paths)
     require_once $paths['config.logger'];
     require_once $paths['routes'];
 
+    $app = (new \Stack\Builder())
+        ->push('Jsor\Stack\JWT', [
+            'firewall' => [
+                ['path' => '/',         'anonymous' => false],
+                ['path' => '/tokens',   'anonymous' => true]
+            ],
+            'key_provider' => function() {
+                return 'secret-key';
+            },
+            'realm' => 'The Glowing Territories',
+        ])
+        ->push('Phprest\Middleware\ApiVersion') # you should push this too
+        ->resolve($app);
+
+    Stack\run($app);
+
     return $app;
 }
 

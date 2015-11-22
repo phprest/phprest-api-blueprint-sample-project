@@ -6,7 +6,7 @@ frisby.create('Post /temperatures [correct]')
 	.post(config.url + '/temperatures', {},
 	{
 		body: '{ "value": 10, "created": "2014-12-01T10:00:00Z" }',
-		headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }
+		headers: { 'Accept': '*/*', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXUyJ9.eyJ1aWQiOjEsImlhdCI6MTQ0ODIwMTQwN30.mZVAs4ZYmxB8HsjfIcpqMC4_nNJkjsBRPdnfvIx8yBg' }
 	})
 	.expectStatus(201)
 	.toss();
@@ -15,7 +15,7 @@ frisby.create('Post /temperatures [wrong Content-Type]')
 	.post(config.url + '/temperatures', {},
 	{
 		body: '{ "value": 150 }',
-		headers: { 'Accept': '*/*', 'Content-Type': 'application/yml' }
+		headers: { 'Accept': '*/*', 'Content-Type': 'application/yml', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXUyJ9.eyJ1aWQiOjEsImlhdCI6MTQ0ODIwMTQwN30.mZVAs4ZYmxB8HsjfIcpqMC4_nNJkjsBRPdnfvIx8yBg' }
 	})
 	.expectStatus(415)
 	.toss();
@@ -24,7 +24,7 @@ frisby.create('Post /temperatures [wrong data]')
 	.post(config.url + '/temperatures', {},
 	{
 		body: '{ "value": 150 }',
-		headers: { 'Accept': '*/*', 'Content-Type': 'application/json' }
+		headers: { 'Accept': '*/*', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXUyJ9.eyJ1aWQiOjEsImlhdCI6MTQ0ODIwMTQwN30.mZVAs4ZYmxB8HsjfIcpqMC4_nNJkjsBRPdnfvIx8yBg'  }
 	})
 	.expectStatus(422)
 	.toss();

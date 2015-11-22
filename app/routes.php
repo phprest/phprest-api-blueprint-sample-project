@@ -4,3 +4,4 @@
 
 $app->registerController('\Api\Temperature\Controller\Temperature');
 $app->registerController('\Api\Camera\Controller\Camera');
+$app->registerController('\Api\Token\Controller\Token');

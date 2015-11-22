@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2b352c2140a75fe6a4d1e707c03a8668",
+    "hash": "44bf00891f9777eaf14c34c6a68f3f20",
+    "content-hash": "79e831785b4eb564d8de98dbe11e3ae4",
     "packages": [
         {
             "name": "alexbilbie/proton",
@@ -63,6 +64,129 @@
                 "proton"
             ],
             "time": "2015-03-26 17:35:31"
+        },
+        {
+            "name": "dflydev/stack-authentication",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dflydev/dflydev-stack-authentication.git",
+                "reference": "62b092ac20517a03c41e847a15468f018f0d62e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dflydev/dflydev-stack-authentication/zipball/62b092ac20517a03c41e847a15468f018f0d62e7",
+                "reference": "62b092ac20517a03c41e847a15468f018f0d62e7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "symfony/http-foundation": "~2.1",
+                "symfony/http-kernel": "~2.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.21",
+                "silex/silex": "1.1.*@dev",
+                "stack/builder": "~1.0@dev",
+                "stack/callable-http-kernel": "~1.0@dev",
+                "stack/inline": "~1.0@dev",
+                "symfony/browser-kit": "~2.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Dflydev\\Stack": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dragonfly Development Inc.",
+                    "email": "info@dflydev.com",
+                    "homepage": "http://dflydev.com"
+                },
+                {
+                    "name": "Beau Simensen",
+                    "email": "beau@dflydev.com",
+                    "homepage": "http://beausimensen.com"
+                }
+            ],
+            "description": "STACK-2 Authentication Middlewares",
+            "keywords": [
+                "stack",
+                "stack-2"
+            ],
+            "time": "2013-08-02 03:57:47"
+        },
+        {
+            "name": "dflydev/stack-firewall",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dflydev/dflydev-stack-firewall.git",
+                "reference": "86eb1aadca95fa7d3c0a8863e9a98f5762173076"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dflydev/dflydev-stack-firewall/zipball/86eb1aadca95fa7d3c0a8863e9a98f5762173076",
+                "reference": "86eb1aadca95fa7d3c0a8863e9a98f5762173076",
+                "shasum": ""
+            },
+            "require": {
+                "dflydev/stack-authentication": "1.0.*@dev",
+                "php": ">=5.4.0",
+                "symfony/http-foundation": "~2.1",
+                "symfony/http-kernel": "~2.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.21",
+                "silex/silex": "1.1.*@dev",
+                "stack/builder": "~1.0@dev",
+                "stack/callable-http-kernel": "~1.0@dev",
+                "stack/inline": "~1.0@dev",
+                "symfony/browser-kit": "~2.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Dflydev\\Stack": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dragonfly Development Inc.",
+                    "email": "info@dflydev.com",
+                    "homepage": "http://dflydev.com"
+                },
+                {
+                    "name": "Beau Simensen",
+                    "email": "beau@dflydev.com",
+                    "homepage": "http://beausimensen.com"
+                }
+            ],
+            "description": "Firewall Stack middleware",
+            "keywords": [
+                "stack",
+                "stack-2"
+            ],
+            "time": "2013-11-01 16:25:27"
         },
         {
             "name": "doctrine/annotations",
@@ -883,6 +1007,66 @@
             "time": "2014-03-18 08:39:00"
         },
         {
+            "name": "jsor/stack-jwt",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jsor/stack-jwt.git",
+                "reference": "7f48ce012c4d045f42c1bcd89e3f6aa07aad3f43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jsor/stack-jwt/zipball/7f48ce012c4d045f42c1bcd89e3f6aa07aad3f43",
+                "reference": "7f48ce012c4d045f42c1bcd89e3f6aa07aad3f43",
+                "shasum": ""
+            },
+            "require": {
+                "dflydev/stack-authentication": "~1.0@dev",
+                "dflydev/stack-firewall": "~1.0@dev",
+                "namshi/jose": "~6.0",
+                "php": ">=5.4.0",
+                "symfony/http-foundation": "~2.1",
+                "symfony/http-kernel": "~2.1"
+            },
+            "require-dev": {
+                "silex/silex": "~1.0@dev",
+                "stack/inline": "~1.0@dev",
+                "symfony/browser-kit": "~2.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jsor\\Stack\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com"
+                }
+            ],
+            "description": "JSON Web Token (JWT) Stack middleware.",
+            "homepage": "https://github.com/jsor/stack-jwt",
+            "keywords": [
+                "Authentication",
+                "StackPHP",
+                "jwt",
+                "rest",
+                "stack",
+                "stack-2"
+            ],
+            "time": "2015-09-07 06:54:06"
+        },
+        {
             "name": "league/booboo",
             "version": "1.0.0",
             "source": {
@@ -1166,6 +1350,62 @@
             "time": "2014-12-29 21:29:35"
         },
         {
+            "name": "namshi/jose",
+            "version": "6.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/namshi/jose.git",
+                "reference": "e214c25ce0deed923ef6b299fbad87a822b51b2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/namshi/jose/zipball/e214c25ce0deed923ef6b299fbad87a822b51b2c",
+                "reference": "e214c25ce0deed923ef6b299fbad87a822b51b2c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-date": "*",
+                "ext-hash": "*",
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "ext-pcre": "*",
+                "ext-spl": "*",
+                "php": ">=5.4.8",
+                "phpseclib/phpseclib": "1.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.5",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Namshi\\JOSE": "src/",
+                    "Namshi\\JOSE\\Test": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alessandro Nadalin",
+                    "email": "alessandro.nadalin@gmail.com"
+                }
+            ],
+            "description": "JSON Object Signing and Encryption library for PHP.",
+            "keywords": [
+                "JSON Web Signature",
+                "JSON Web Token",
+                "JWS",
+                "json",
+                "jwt",
+                "token"
+            ],
+            "time": "2015-11-13 08:01:01"
+        },
+        {
             "name": "nikic/fast-route",
             "version": "v0.6.0",
             "source": {
@@ -1313,12 +1553,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phprest/phprest.git",
-                "reference": "3fe2eda178d9d01ee804d398f3c3743bfef4fce4"
+                "reference": "fd7c52f071eda7e12e7288700c6711796501bfbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phprest/phprest/zipball/3fe2eda178d9d01ee804d398f3c3743bfef4fce4",
-                "reference": "3fe2eda178d9d01ee804d398f3c3743bfef4fce4",
+                "url": "https://api.github.com/repos/phprest/phprest/zipball/fd7c52f071eda7e12e7288700c6711796501bfbc",
+                "reference": "fd7c52f071eda7e12e7288700c6711796501bfbc",
                 "shasum": ""
             },
             "require": {
@@ -1346,6 +1586,11 @@
                 "bin/phprest"
             ],
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Phprest\\": "src"
@@ -1372,7 +1617,7 @@
                 "rest",
                 "restful"
             ],
-            "time": "2015-06-28 08:43:18"
+            "time": "2015-11-22 00:03:23"
         },
         {
             "name": "phprest/phprest-service-orm",
@@ -1526,6 +1771,100 @@
             "time": "2015-06-29 10:34:16"
         },
         {
+            "name": "phpseclib/phpseclib",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpseclib/phpseclib.git",
+                "reference": "844134df95e42b93ed5506a2d11ca5accda99412"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/844134df95e42b93ed5506a2d11ca5accda99412",
+                "reference": "844134df95e42b93ed5506a2d11ca5accda99412",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "require-dev": {
+                "phing/phing": "~2.7",
+                "phpunit/phpunit": "~4.0",
+                "sami/sami": "~2.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "suggest": {
+                "ext-gmp": "Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.",
+                "ext-mcrypt": "Install the Mcrypt extension in order to speed up a few other cryptographic operations.",
+                "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations.",
+                "pear-pear/PHP_Compat": "Install PHP_Compat to get phpseclib working on PHP < 5.0.0."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Crypt": "phpseclib/",
+                    "File": "phpseclib/",
+                    "Math": "phpseclib/",
+                    "Net": "phpseclib/",
+                    "System": "phpseclib/"
+                },
+                "files": [
+                    "phpseclib/Crypt/Random.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "phpseclib/"
+            ],
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jim Wigginton",
+                    "email": "terrafrost@php.net",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Patrick Monnerat",
+                    "email": "pm@datasphere.ch",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Andreas Fischer",
+                    "email": "bantu@phpbb.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Hans-Jürgen Petrich",
+                    "email": "petrich@tronic-media.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP Secure Communications Library - Pure-PHP implementations of RSA, AES, SSH2, SFTP, X.509 etc.",
+            "homepage": "http://phpseclib.sourceforge.net",
+            "keywords": [
+                "BigInteger",
+                "aes",
+                "asn.1",
+                "asn1",
+                "blowfish",
+                "crypto",
+                "cryptography",
+                "encryption",
+                "rsa",
+                "security",
+                "sftp",
+                "signature",
+                "signing",
+                "ssh",
+                "twofish",
+                "x.509",
+                "x509"
+            ],
+            "time": "2015-08-04 02:22:12"
+        },
+        {
             "name": "psr/log",
             "version": "1.0.0",
             "source": {
@@ -1613,17 +1952,67 @@
             "time": "2014-11-23 20:37:11"
         },
         {
+            "name": "stack/run",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stackphp/run.git",
+                "reference": "a1bc94ee4493aa0988dffd89b6b8a6cdcdb3c905"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stackphp/run/zipball/a1bc94ee4493aa0988dffd89b6b8a6cdcdb3c905",
+                "reference": "a1bc94ee4493aa0988dffd89b6b8a6cdcdb3c905",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/http-foundation": "~2.1",
+                "symfony/http-kernel": "~2.1"
+            },
+            "require-dev": {
+                "stack/callable-http-kernel": "~1.0@dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Stack/run.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch",
+                    "homepage": "http://wiedler.ch/igor/"
+                }
+            ],
+            "description": "Shortcut function for handling HttpKernel front-controller boilerplate.",
+            "keywords": [
+                "stack"
+            ],
+            "time": "2013-10-25 14:31:28"
+        },
+        {
             "name": "symfony/console",
             "version": "v2.6.9",
             "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Console.git",
+                "url": "https://github.com/symfony/console.git",
                 "reference": "b5ec0c11a204718f2b656357f5505a8e578f30dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/b5ec0c11a204718f2b656357f5505a8e578f30dd",
+                "url": "https://api.github.com/repos/symfony/console/zipball/b5ec0c11a204718f2b656357f5505a8e578f30dd",
                 "reference": "b5ec0c11a204718f2b656357f5505a8e578f30dd",
                 "shasum": ""
             },
@@ -1675,12 +2064,12 @@
             "version": "v2.7.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Debug.git",
+                "url": "https://github.com/symfony/debug.git",
                 "reference": "075070230c5bbc65abde8241191655bbce0716e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/075070230c5bbc65abde8241191655bbce0716e2",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/075070230c5bbc65abde8241191655bbce0716e2",
                 "reference": "075070230c5bbc65abde8241191655bbce0716e2",
                 "shasum": ""
             },
@@ -1735,12 +2124,12 @@
             "version": "v2.7.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/EventDispatcher.git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
                 "reference": "be3c5ff8d503c46768aeb78ce6333051aa6f26d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/be3c5ff8d503c46768aeb78ce6333051aa6f26d9",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/be3c5ff8d503c46768aeb78ce6333051aa6f26d9",
                 "reference": "be3c5ff8d503c46768aeb78ce6333051aa6f26d9",
                 "shasum": ""
             },
@@ -1842,12 +2231,12 @@
             "version": "v2.7.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/HttpFoundation.git",
+                "url": "https://github.com/symfony/http-foundation.git",
                 "reference": "4f363c426b0ced57e3d14460022feb63937980ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/4f363c426b0ced57e3d14460022feb63937980ff",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/4f363c426b0ced57e3d14460022feb63937980ff",
                 "reference": "4f363c426b0ced57e3d14460022feb63937980ff",
                 "shasum": ""
             },
@@ -1895,12 +2284,12 @@
             "version": "v2.7.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/HttpKernel.git",
+                "url": "https://github.com/symfony/http-kernel.git",
                 "reference": "208101c7a11e31933183bd2a380486e528c74302"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/208101c7a11e31933183bd2a380486e528c74302",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/208101c7a11e31933183bd2a380486e528c74302",
                 "reference": "208101c7a11e31933183bd2a380486e528c74302",
                 "shasum": ""
             },
