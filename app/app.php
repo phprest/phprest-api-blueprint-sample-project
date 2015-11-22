@@ -4,7 +4,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $paths = require __DIR__ . '/../paths.php';
 
 return getApplication(
-    getApplicationConfig('phprest', '0.1', true, $paths),
+    getApplicationConfig('phprest', '0.1', true),
     $paths
 );
 
@@ -22,8 +22,8 @@ function getApplication(\Phprest\Config $config, array $paths)
     require_once $paths['config.logger'];
     require_once $paths['routes'];
 
-    $app = (new \Stack\Builder())
-        ->push('Jsor\Stack\JWT', [
+    $app->registerMiddleware('Jsor\Stack\JWT', [
+        [
             'firewall' => [
                 ['path' => '/',         'anonymous' => false],
                 ['path' => '/tokens',   'anonymous' => true]
@@ -31,12 +31,9 @@ function getApplication(\Phprest\Config $config, array $paths)
             'key_provider' => function() {
                 return 'secret-key';
             },
-            'realm' => 'The Glowing Territories',
-        ])
-        ->push('Phprest\Middleware\ApiVersion') # you should push this too
-        ->resolve($app);
-
-    Stack\run($app);
+            'realm' => 'The Glowing Territories'
+        ]
+    ]);
 
     return $app;
 }
@@ -45,11 +42,10 @@ function getApplication(\Phprest\Config $config, array $paths)
  * @param string $vendor
  * @param string|integer$apiVersion
  * @param boolean $debug
- * @param array $paths
  *
  * @return \Phprest\Config
  */
-function getApplicationConfig($vendor, $apiVersion, $debug, array $paths)
+function getApplicationConfig($vendor, $apiVersion, $debug)
 {
     $config = new \Phprest\Config($vendor, $apiVersion, $debug);
 
